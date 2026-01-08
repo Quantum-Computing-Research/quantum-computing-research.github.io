@@ -1,0 +1,94 @@
+/* ===========================
+   Cards: tamanho controlado
+   (a imagem SEMPRE cabe)
+=========================== */
+
+/* Altura da área de imagem escala com a tela, com limites */
+:root{
+  --card-img-h: clamp(180px, 24vw, 320px); /* min 180px, cresce até 320px */
+}
+
+/* Caixa da imagem (altura fixa e responsiva) */
+/* #portfolio .portfolio-item .thumb{
+  width: 100%;
+  height: var(--card-img-h);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: #f7f9fc;
+  border-radius: 10px;
+  padding: 8px;
+  box-sizing: border-box;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+} */
+
+/* A imagem se ajusta para CABER (sem cortar), ignorando Bootstrap */
+/* #portfolio .portfolio-item .thumb img{
+  width: 100% !important;      
+  height: 100% !important;     
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain !important;  
+  object-position: center center;
+  display: block;
+  transition: transform .2s ease;
+} */
+/* #portfolio .thumb img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  margin: 0 auto;
+  transition: transform .2s ease;
+} */
+
+/* A caixa da imagem */
+#portfolio .thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 8px;
+  border-radius: 10px;
+  background: transparent !important; /* sem fundo */
+  box-shadow: none !important;        /* sem sombra */
+  transition: none !important;
+}
+
+/* A imagem se adapta à MAIOR dimensão da caixa sem cortar */
+#portfolio .thumb img {
+  width: auto !important;        /* não força largura total */
+  height: auto !important;       /* idem para altura */
+  max-width: 100% !important;    /* não ultrapassa os limites da caixa */
+  max-height: 100% !important;   /* idem */
+  object-fit: scale-down !important; /* mantém proporção, usando o maior ajuste possível */
+  object-position: center center !important;
+  display: block;
+  transition: transform 0.2s ease;
+  box-shadow: none !important;        /* remove sombra herdada */
+  filter: none !important;            /* remove drop-shadow */
+  background: transparent !important; /* fundo neutro */
+}
+
+/* Pequeno efeito ao passar o mouse */
+#portfolio .thumb:hover img {
+  transform: scale(1.03);
+}
+/* Efeito sutil ao passar o mouse (opcional) */
+#portfolio .portfolio-item .thumb:hover img{
+  transform: scale(1.03);
+}
+
+/* Ajustes finos para telas menores */
+@media (max-width: 1024px){
+  :root{ --card-img-h: clamp(160px, 28vw, 260px); }
+}
+@media (max-width: 700px){
+  :root{ --card-img-h: clamp(140px, 40vw, 220px); }
+}
