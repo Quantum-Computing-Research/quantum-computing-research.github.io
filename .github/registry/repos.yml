@@ -17,7 +17,7 @@ repos:
     site_hero_image: quantum-error-mitigation.png
     site_description:
     readme_tagline:
-    readme_cta_text: "Open full course website."
+    readme_cta_text: "Research notebooks"
     readme_theme: minimal
 
   - org: Quantum-Computing-Research
@@ -32,7 +32,7 @@ repos:
     site_hero_image: quantum-algorithms.png
     site_description:
     readme_tagline:
-    readme_cta_text: "Open full course website."
+    readme_cta_text: "Research notebooks"
     readme_theme: minimal
 
   - org: Quantum-Computing-Research
@@ -47,7 +47,7 @@ repos:
     site_hero_image: quantum-learning.png
     site_description:
     readme_tagline:
-    readme_cta_text: "Open full course website."
+    readme_cta_text: "Research notebooks"
     readme_theme: minimal
 
   - org: Quantum-Computing-Research
@@ -62,5 +62,5 @@ repos:
     site_hero_image: batalha-naval-quantica.png
     site_description:
     readme_tagline:
-    readme_cta_text: "Open full course website."
+    readme_cta_text: "Play a quantum battleship match"
     readme_theme: minimal
